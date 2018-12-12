@@ -1,0 +1,54 @@
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+/home/elearning/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20181212-17821-laenyn.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_closure_alloc()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for shlwapi.h... no
+checking for ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... yes
+creating extconf.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/ffi-1.9.25/mkmf.log
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR="
+compiling Struct.c
+compiling StructLayout.c
+compiling Variadic.c
+compiling ArrayType.c
+compiling Call.c
+compiling Type.c
+compiling LastError.c
+compiling DataConverter.c
+compiling Thread.c
+compiling MappedType.c
+compiling AbstractMemory.c
+compiling LongDouble.c
+compiling Types.c
+compiling Buffer.c
+compiling Pointer.c
+compiling Function.c
+compiling Platform.c
+compiling DynamicLibrary.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling ClosurePool.c
+compiling MethodHandle.c
+compiling FunctionInfo.c
+compiling ffi.c
+compiling MemoryPointer.c
+linking shared-object ffi_c.so
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ffi_c.so ./.gem.20181212-17821-rhc8qz

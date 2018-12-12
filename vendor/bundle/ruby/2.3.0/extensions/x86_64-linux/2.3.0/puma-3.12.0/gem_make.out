@@ -1,0 +1,52 @@
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
+/home/elearning/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20181212-17821-1jels3h.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/puma-3.12.0/mkmf.log
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR="
+compiling mini_ssl.c
+mini_ssl.c: In function ‘get_dh1024’:
+mini_ssl.c:100:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   BIGNUM *p, *g;
+   ^
+mini_ssl.c: In function ‘engine_init_server’:
+mini_ssl.c:153:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   ID sym_cert = rb_intern("cert");
+   ^
+mini_ssl.c:158:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   ID sym_ca = rb_intern("ca");
+   ^
+mini_ssl.c:189:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   DH *dh = get_dh1024();
+   ^
+mini_ssl.c:193:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   EC_KEY *ecdh = EC_KEY_new_by_curve_name(NID_secp521r1);
+   ^
+mini_ssl.c: In function ‘engine_init_client’:
+mini_ssl.c:220:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
+   conn->ctx = SSL_CTX_new(DTLSv1_method());
+   ^
+In file included from /usr/include/openssl/e_os2.h:13:0,
+                 from /usr/include/openssl/bio.h:13,
+                 from mini_ssl.c:14:
+/usr/include/openssl/ssl.h:1870:1: note: declared here
+ DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+ ^
+compiling http11_parser.c
+compiling io_buffer.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/elearning/public_html/elearning/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -m 0755 puma_http11.so ./.gem.20181212-17821-w0acxk/puma

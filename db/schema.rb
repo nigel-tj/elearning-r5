@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170613025105) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.boolean "admin"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.datetime "remember_created_at"
@@ -77,7 +78,6 @@ ActiveRecord::Schema.define(version: 20170613025105) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin"
     t.boolean "teacher_role"
     t.boolean "student_role"
     t.integer "university_id"
