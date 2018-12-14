@@ -2,30 +2,30 @@
   <ul class="slides">
     <li>
       <%= image_tag('cover1.jpg') %>
-        <!-- random image -->
-        <div class="caption center-align">
-          <h3>Welcome to FreeCoursesOnline</h3>
-          <h4 class="light grey-text text-lighten-3">Free for everyone, forever!</h4>
-          <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
-        </div>
+      <!-- random image -->
+      <div class="caption center-align">
+        <h3>Welcome to FreeCoursesOnline</h3>
+        <h4 class="light grey-text text-lighten-3">Free for everyone, forever!</h4>
+        <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
+      </div>
     </li>
     <li>
       <%= image_tag('cover2.jpg') %>
-        <!-- random image -->
-        <div class="caption left-align">
-          <h3>Become certified starting from now</h3>
-          <h5 class="light grey-text text-lighten-3">We offer the best certificates in the market</h5>
-           <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
-        </div>
+      <!-- random image -->
+      <div class="caption left-align">
+        <h3>Become certified starting from now</h3>
+        <h5 class="light grey-text text-lighten-3">We offer the best certificates in the market</h5>
+        <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
+      </div>
     </li>
     <li>
       <%= image_tag('cover3.jpg') %>
-        <!-- random image -->
-        <div class="caption right-align">
-          <h3>Free courses from prestigious Universities</h3>
-          <h5 class="light grey-text text-lighten-3">High ranked universities from all around the world</h5>
-           <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
-        </div>
+      <!-- random image -->
+      <div class="caption right-align">
+        <h3>Free courses from prestigious Universities</h3>
+        <h5 class="light grey-text text-lighten-3">High ranked universities from all around the world</h5>
+        <%= link_to 'Start Learning NOW', new_user_registration_path, class: 'waves-effect waves-light btn-large'%>
+      </div>
     </li>
   </ul>
 </div>
@@ -33,36 +33,33 @@
 <div class="divider"></div>
 
 <div class="container">
-<div class="row"></div>
-<div class="row">
-   <nav>
-    <div class="nav-wrapper">
-      
-       <%= form_tag(courses_all_path, :method => "get", id: "search") do %>
-          <div class="input-field">
-           <%= text_field_tag :search, params[:search], placeholder: "Search Courses", type: "search" %>
+  <div class="row"></div>
+  <div class="row">
+    <nav>
+      <div class="nav-wrapper">
+	
+	<%= form_tag(courses_all_path, :method => "get", id: "search") do %>
+	<div class="input-field">
+          <%= text_field_tag :search, params[:search], placeholder: "Search Courses", type: "search" %>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
-          </div>     
-      <% end %>
-    </div>
-  </nav>
-</div>
-  <div>
-    <h4 class="center-align">Cours Recent</h4>
+	</div>     
+	<% end %>
+      </div>
+    </nav>
   </div>
   
   <div class="row">
+    <h4 class="center-align">Cours Recent</h4>
     <% Course.last(5).reverse.each do |course| %>
-     <%= render( :partial => 'cards/card', :locals => { course: course }) %>
+    <%= render( :partial => 'cards/card', :locals => { course: course }) %>
     <% end %>
   </div>
 </div>
-
 <script>
-
- $(document).ready(function(){
-      $('.slider').slider();
-    });
-
+  
+  $(document).ready(function(){
+  $('.slider').slider();
+  });
+  
 </script>
